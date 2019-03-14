@@ -78,7 +78,12 @@ abstract class PhysicsBox extends PhysicsObject{
         
     }
 
-/*    updateContent(){}
-    collisionEvent(){}*/
 
+
+}
+
+class MyBox extends Box{
+    constructor(x : number, y : number, width : number, height : number, color:number) {
+        super(x, y, width, height, color);
+    }
 }

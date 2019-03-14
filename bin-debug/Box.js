@@ -71,4 +71,12 @@ var PhysicsBox = (function (_super) {
     return PhysicsBox;
 }(PhysicsObject));
 __reflect(PhysicsBox.prototype, "PhysicsBox");
+var MyBox = (function (_super) {
+    __extends(MyBox, _super);
+    function MyBox(x, y, width, height, color) {
+        return _super.call(this, x, y, width, height, color) || this;
+    }
+    return MyBox;
+}(Box));
+__reflect(MyBox.prototype, "MyBox");
 //# sourceMappingURL=Box.js.map
