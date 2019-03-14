@@ -79,7 +79,6 @@ abstract class PhysicsObject extends GameObject{
     }
 
     abstract updateContent() : void;
-    abstract collisionEvent():void;
 
     addDestroyMethod(){
         CreateWorld.world.removeBody(this.body);

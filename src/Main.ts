@@ -29,8 +29,8 @@ class Game{
         this.width  = egret.MainContext.instance.stage.stageWidth;
         
         /* new メソッドを記入*/
-
-
+        new Background();
+        new Score();
     }
 
 
@@ -43,8 +43,8 @@ class Background extends GameObject{
         super();
 
         this.shape = new egret.Shape();
-        this.shape.graphics.beginFill(0x00c0e0);
-        this.shape.graphics.drawRect(0, 0, Util.width, Util.height);
+        this.shape.graphics.beginFill(Util.color(255,255,255));
+        this.shape.graphics.drawRect(0, 0, Game.width, Game.height);
         this.shape.graphics.endFill();
         GameObject.display.addChild(this.shape);
     }
@@ -83,6 +83,6 @@ class CreateWorld extends PhysicsObject{
     addDestroyMethod(){CreateWorld.world.clear();}
 
     updateContent(){}
-    collisionEvent(){}
+
 
 }

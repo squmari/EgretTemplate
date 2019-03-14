@@ -35,6 +35,8 @@ var Game = (function () {
         this.height = egret.MainContext.instance.stage.stageHeight;
         this.width = egret.MainContext.instance.stage.stageWidth;
         /* new メソッドを記入*/
+        new Background();
+        new Score();
     };
     return Game;
 }());
@@ -44,8 +46,8 @@ var Background = (function (_super) {
     function Background() {
         var _this = _super.call(this) || this;
         _this.shape = new egret.Shape();
-        _this.shape.graphics.beginFill(0x00c0e0);
-        _this.shape.graphics.drawRect(0, 0, Util.width, Util.height);
+        _this.shape.graphics.beginFill(Util.color(255, 255, 255));
+        _this.shape.graphics.drawRect(0, 0, Game.width, Game.height);
         _this.shape.graphics.endFill();
         GameObject.display.addChild(_this.shape);
         return _this;
@@ -76,7 +78,6 @@ var CreateWorld = (function (_super) {
     };
     CreateWorld.prototype.addDestroyMethod = function () { CreateWorld.world.clear(); };
     CreateWorld.prototype.updateContent = function () { };
-    CreateWorld.prototype.collisionEvent = function () { };
     CreateWorld.I = null;
     return CreateWorld;
 }(PhysicsObject));
