@@ -32,16 +32,28 @@ var Util = (function () {
             (((c0 & 0xff) * rate10 + (c1 & 0xff) * rate01) & 0xff);
         return color;
     };
-    Util.newText = function (x, y, text, size, ratio, color, font, stColor, stSize) {
+    Util.myText = function (x, y, text, size, ratio, color, bold) {
         var tf = new egret.TextField();
-        tf.x = x || 0;
-        tf.y = y || 0;
-        tf.scaleX = ratio || 1;
-        tf.scaleY = ratio || 1;
+        tf.x = x;
+        tf.y = y;
+        tf.text = text;
+        tf.bold = bold;
+        tf.size = size;
+        tf.scaleX = ratio;
+        tf.scaleY = ratio;
+        tf.textColor = color;
+        return tf;
+    };
+    Util.myStrokeText = function (x, y, text, size, ratio, color, font, stColor, stSize) {
+        var tf = new egret.TextField();
+        tf.x = x;
+        tf.y = y;
+        tf.scaleX = ratio;
+        tf.scaleY = ratio;
         tf.textFlow = [
             { text: text,
                 style: {
-                    "textColor": color || 0x000000, "size": size || 1, "fontFamily": font || "Meiryo", "strokeColor": stColor || 0x000000, "stroke": stSize || 0,
+                    "textColor": color, "size": size, "fontFamily": font, "strokeColor": stColor, "stroke": stSize,
                 }
             }
         ];

@@ -7,6 +7,7 @@ class Main extends eui.UILayer {
  
     private addToStage() {
         GameObject.initial( this.stage );
+        MainCamera.initial(this.stage);
         Game.init();
         egret.startTick(this.tickLoop, this);
     }
@@ -28,6 +29,8 @@ class Game{
         this.width  = egret.MainContext.instance.stage.stageWidth;
         
         /* new メソッドを記入*/
+
+
     }
 
 
@@ -41,7 +44,7 @@ class Background extends GameObject{
 
         this.shape = new egret.Shape();
         this.shape.graphics.beginFill(0x00c0e0);
-        this.shape.graphics.drawRect(0, 0, Utility.width, Utility.height);
+        this.shape.graphics.drawRect(0, 0, Util.width, Util.height);
         this.shape.graphics.endFill();
         GameObject.display.addChild(this.shape);
     }
