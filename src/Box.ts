@@ -34,8 +34,7 @@ abstract class PhysicsBox extends PhysicsObject{
     protected x : number;
     protected y : number;
     protected color : number;
-    static boxMove : boolean = false;
-    static blockdownSpeed : number = 3;
+
     
     constructor(x : number, y : number, width : number, height : number, color:number) {
         super();

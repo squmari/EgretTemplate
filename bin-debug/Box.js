@@ -66,8 +66,6 @@ var PhysicsBox = (function (_super) {
         this.shape.graphics.endFill();
         GameObject.display.addChild(this.shape);
     };
-    PhysicsBox.boxMove = false;
-    PhysicsBox.blockdownSpeed = 3;
     return PhysicsBox;
 }(PhysicsObject));
 __reflect(PhysicsBox.prototype, "PhysicsBox");

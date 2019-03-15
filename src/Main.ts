@@ -6,8 +6,23 @@ class Main extends eui.UILayer {
     }
  
     private addToStage() {
+                let hello:eui.Label = new eui.Label();
+        hello.text = "Hello World";
+ 
+        //textの移動
+        hello.x = 300;
+        hello.y = 100;
+ 
+        //サイズ変更
+        hello.size = 50;
+ 
+        //色の変更
+        hello.textColor = 0xff0000;
+ 
+        //addChildでオブジェクトを表示する 
+        this.addChild(hello);
         GameObject.initial( this.stage );
-        MainCamera.initial(this.stage);
+        Util.init(this);
         Game.init();
         egret.startTick(this.tickLoop, this);
     }
@@ -31,6 +46,7 @@ class Game{
         /* new メソッドを記入*/
         new Background();
         new Score();
+        
     }
 
 
