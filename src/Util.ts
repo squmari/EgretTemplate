@@ -49,14 +49,7 @@ class Util{
         return code;
     }
 
-/*    static colorLerp( c0:number, c1:number, rate01:number):number {
-        let rate10 = 1 - rate01;
-        let color = 
-            ( ((c0&0xff0000) * rate10 + (c1&0xff0000) * rate01) & 0xff0000 ) +
-            ( ((c0&0xff00) * rate10 + (c1&0xff00) * rate01) & 0xff00 ) +
-            ( ((c0&0xff) * rate10 + (c1&0xff) * rate01) & 0xff );
-        return color;
-    }*/
+
 
     static myText(x:number, y:number, text:string, size:number, ratio:number, color:number, bold:boolean): egret.TextField {
         
